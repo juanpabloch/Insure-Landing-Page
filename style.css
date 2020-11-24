@@ -1,0 +1,452 @@
+:root{
+    --mobile: 550px;
+    --desktop: 1440px;
+
+    --darkviolet: hsl(256, 26%, 20%);
+    --grayishblue: hsl(216, 30%, 68%);
+    --verydarkviolet: hsl(270, 9%, 17%);
+    --darkgrayishviolet: hsl(273, 4%, 51%);
+    --verylightgray: hsl(0, 0%, 98%);
+
+    --font-head: 'DM Serif Display', serif;
+    --font-body: 'Karla', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* globales */
+body{
+    width: 100%;
+    font-family: var(--font-body);
+}
+
+h1, h2, h3, h4{
+    font-family: var(--font-head)
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+    padding: 20px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex > div{
+    flex: 1;
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+hr{
+    width: 150px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
+
+p{
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.hide{
+    display: none;
+}
+/* boton */
+.boton{
+    border: 2px solid var(--verylightgray);
+    padding: 10px 25px;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: var(--verylightgray);
+    display: inline-block;
+}
+    .boton:hover{
+        background-color: var(--verylightgray);
+        color: var(--verydarkviolet);
+    }
+
+/* nav */
+
+nav button {
+    display: none;
+}
+
+.logo-nav{
+    display: flex;
+    align-items: center;
+}
+
+.logo-nav li{
+    margin-right: 30px;
+}
+
+.logo-nav a{
+    color: var(--darkgrayishviolet);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+    .logo-nav a:hover{
+        color: var(--verydarkviolet);
+    }
+.logo-nav .boton{
+    border: 2px solid var(--verydarkviolet);
+    color: var(--verydarkviolet);
+}
+    .logo-nav .boton:hover{
+        background-color: var(--verydarkviolet);
+        color: var(--verylightgray);
+    }
+
+
+
+/* showcase */
+header{
+    background-color: var(--darkviolet);
+    color: var(--verylightgray);
+    padding: 30px;
+    margin-bottom: 250px;
+    position: relative;
+}
+
+header *{
+    z-index: 1;
+}
+
+header::after{
+    content: "";
+    background-image: url('images/bg-pattern-intro-right-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+header::before{
+    content: "";
+    background-image: url('images/bg-pattern-intro-left-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    bottom: -48%;
+    left: 0;
+    z-index: 0;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1;
+    width: 35vw;
+    position: relative;
+    padding-top: 50px;
+}
+    /*linea arriba del titulo*/
+h1::before{
+    content: "";
+    background-color: var(--verylightgray);
+    height: 1.5px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .right{
+    width: 100%;
+}
+
+.imagen-p{
+    margin-bottom: -200px;
+    max-width: 100%;
+    min-width: 520px;
+}
+
+
+/* article different */
+.different{
+    margin-bottom: 150px
+}
+.different .info{
+    margin-right: 25px;
+}
+
+    .different h2{
+        font-size: 4.5rem;
+        font-weight: 400;
+        line-height: 3;
+        position: relative;
+    }
+        .different h2::before{
+            content: "";
+            background-color: var(--darkgrayishviolet);
+            height: 2px;
+            width: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+.different h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.different p{
+    color: var(--darkgrayishviolet)
+}
+
+
+/* article find out more */
+.find-more {
+    margin-bottom: 150px;
+}
+
+.find-more .container{
+    background-color: var(--darkviolet);
+    height: 250px;
+    padding: 50px 70px;
+    position: relative;
+    background-image: url('images/bg-pattern-how-we-work-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+
+.find-more h2{
+    color: var(--verylightgray);
+    font-size: 3.3rem;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+
+
+
+/* footer */
+footer{
+    background-color: var(--verylightgray);
+    position: relative;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing:2.2px;
+    font-size: .9em;
+        background-image: url('images/bg-pattern-footer-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+}
+
+footer .redes{
+    text-align: right;
+    position: relative;
+    padding: 30px 0;
+}
+    .redes a{
+        margin-right: 15px;
+    }
+    footer .redes img:hover{
+        filter: brightness(0.4);
+    }
+
+.nav-title {
+    color: var(--darkgrayishviolet);
+    margin-bottom: 30px;
+}
+
+.nav-foot a{
+    color: var(--darkviolet);
+    font-weight: bold;
+    line-height:2.3;
+}
+    .nav-foot a:hover{
+        text-decoration: underline;
+        color: var(--grayishblue);
+    }
+
+.footer-logo{
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--darkgrayishviolet);
+}
+
+
+/* mobile desing */
+
+@media (max-width:770px){
+    /*globales*/
+    body{
+        text-align: center;
+    }
+    .flex{
+        flex-direction: column;
+    }
+
+
+    /* nav */
+    nav button {
+        display: inline-block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    nav .logo-nav{
+        display: none;
+    }
+
+    nav .flex{
+        flex-direction: row;
+        text-align: left;
+        padding-top: 15px;
+    }
+
+    nav .show{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--verydarkviolet);
+        align-items: center;
+        z-index: 100;
+    }
+
+        nav .show a{
+            color: var(--verylightgray);
+            font-size: 1.5rem;
+        }
+            nav .show a:hover{
+                color: var(--grayishblue)
+            }
+        nav .show .boton{
+            color: var(--verylightgray);
+            border: 2px solid var(--verylightgray);
+            padding: 15px 70px;
+        }
+            nav .show .boton:hover{
+                background: var(--verylightgray);
+                color: var(--verydarkviolet);
+            }
+        nav .show li{
+            margin-bottom: 35px;
+        }
+
+        nav .show li:nth-child(1){
+            margin-top: 100px;
+        }
+
+    /* showcase */
+    .showcase-info h1{
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .showcase-info h1::before{
+        display: none;
+    }
+
+    .reverse-mobile{
+        flex-direction: column-reverse;
+    }
+
+    .imagen-p{
+        display: inline-block;
+        margin-bottom: 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    header::after{
+        background-image: url('images/bg-pattern-intro-right-mobile.svg');
+        background-position: bottom right;
+        top: 16%;
+        z-index: 0;
+    }
+
+    header::before{
+        display: none;
+    }
+
+    header .container{
+        padding: 0;
+    }
+    header{
+        padding: 0;
+        margin-bottom: 150px;
+    }
+
+    header .left{
+        padding: 0 20px 70px 20px;
+    }
+
+
+    /* article different */
+    .different h2{
+        font-size: calc(3.5rem + 1vw);
+        line-height: 1.5;
+        margin-bottom: 100px;
+        padding-top: 50px;
+    }
+        .different h2::before{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .different .info{
+            margin-bottom: 60px;
+        }
+
+    /* article find out more */
+    .find-more h2{
+        width: 100%;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .find-more .container{
+        height: 100%;
+        background-image: url('images/bg-pattern-how-we-work-mobile.svg');
+    }
+
+    /*footer*/
+    footer{
+        background-image: url("images/bg-pattern-footer-mobile.svg");
+        background-size: 100% auto;
+        background-position: top center;
+    }
+
+    footer .logo{
+        margin-top: 70px;
+    }
+
+    footer .nav-foot{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
